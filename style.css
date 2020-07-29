@@ -1,10 +1,55 @@
-.wrapper{
-    padding-left: 150px;
-    padding-right: 150px;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.header {
+.contenedor{
+    padding-left:  20%;
+    padding-right: 20%;
+}
+
+.titulo {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.pie {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+.enlace:link {
+    text-decoration: none !important;
+
+}
+
+.fotos {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-auto-flow: row dense;
+}
+
+.foto>img {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform ease 0.3s;
+  }
+
+.foto>img:hover{
+    transform: scale(1.1);
+}
+
+@media (min-width: 600px) {
+    .fotos { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .fotos { grid-template-columns: repeat(3, 1fr); }
+  }
+  
+  
